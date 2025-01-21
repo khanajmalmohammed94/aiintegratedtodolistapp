@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme .container {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.theme-toggle button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background-color: #0056b3;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-section input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.input-section button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #1e7e34;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme #task-list li {
+    background-color: #555;
+    color: #f9f9f9;
+}
+
+#task-list li .task-content {
+    flex-grow: 1;
+}
+
+#task-list li .task-suggestion {
+    font-size: 0.8em;
+    color: #777;
+    margin-left: 10px;
+}
+
+body.dark-theme #task-list li .task-suggestion {
+    color: #bbb;
+}
+
+#task-list li .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.ai-chat-container {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme .ai-chat-container {
+    background-color: #444;
+    border-color: #666;
+}
+
+.ai-chat-container h2 {
+    margin-top: 0;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .ai-chat-container h2 {
+    color: #66b3ff;
+}
+
+#ai-messages {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+    overflow-y: scroll;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme #ai-messages {
+    background-color: #555;
+    border-color: #777;
+}
+
+.ai-input {
+    display: flex;
+}
+
+.ai-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.ai-input button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.ai-input button:hover {
+    background-color: #0056b3;
+}
+
+.ai-message {
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.ai-message.user-message {
+    background-color: #e2f0ff;
+    text-align: right;
+}
+
+body.dark-theme .ai-message.user-message {
+    background-color: #6688aa;
+    color: white;
+}
+
+.ai-message.ai-response {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+body.dark-theme .ai-message.ai-response {
+    background-color: #56654d;
+    color: #c8e6c9;
+}

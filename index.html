@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered To-Do List</h1>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">Toggle Theme</button>
+        </div>
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Enter task">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+
+        <div class="ai-chat-container">
+            <h2>AI Assistant</h2>
+            <div id="ai-messages"></div>
+            <div class="ai-input">
+                <input type="text" id="ai-input" placeholder="Ask me anything...">
+                <button id="ai-submit">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
