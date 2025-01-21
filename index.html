@@ -12,20 +12,57 @@
         <div class="theme-toggle">
             <button id="theme-toggle-btn">Toggle Theme</button>
         </div>
-        <div class="input-section">
-            <input type="text" id="task-input" placeholder="Enter task">
-            <button id="add-task-btn">Add Task</button>
-        </div>
-        <ul id="task-list"></ul>
-
-        <div class="ai-chat-container">
-            <h2>AI Assistant</h2>
-            <div id="ai-messages"></div>
-            <div class="ai-input">
-                <input type="text" id="ai-input" placeholder="Ask me anything...">
-                <button id="ai-submit">Send</button>
+        <div class="task-input">
+            <div class="task-form">
+                <input type="text" id="task-input" placeholder="Enter a new task">
+                <select id="task-category">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="other">Other</option>
+                </select>
+                <select id="task-priority">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <input type="datetime-local" id="task-due-date">
+                <button id="add-task-btn">Add Task</button>
             </div>
         </div>
+        <div class="task-filters">
+            <select id="filter-category">
+                <option value="all">All Categories</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="shopping">Shopping</option>
+                <option value="other">Other</option>
+            </select>
+            <select id="filter-priority">
+                <option value="all">All Priorities</option>
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <select id="filter-status">
+                <option value="all">All Status</option>
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="total-progress"></div>
+            <span class="progress-text">0% Complete</span>
+        </div>
+        <ul id="task-list"></ul>
+        <div class="ai-interaction">
+            <input type="text" id="ai-input" placeholder="Ask the AI assistant...">
+            <button id="ai-submit">Submit</button>
+            <button id="speak-btn">Speak</button>
+            <button id="listen-btn">Listen</button>
+        </div>
+        <div id="ai-messages"></div>
     </div>
     <script src="script.js"></script>
 </body>
